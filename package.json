@@ -1,0 +1,24 @@
+{
+  "name": "procedural-noise",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/module.js",
+  "types": "build.module.d.ts",
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/CheersLuv1729/procedural-noise.js#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheersLuv1729/procedural-noise.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CheersLuv1729/procedural-noise.js/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  }
+}
