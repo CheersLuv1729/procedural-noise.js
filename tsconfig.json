@@ -3,11 +3,12 @@
 		"declaration": true,
 		"strictNullChecks": true,
 		"esModuleInterop": true,
+		"allowJs": true,
 		"module": "commonjs",
 		"rootDir": "src",
 		"outDir": "build",
 		"target": "ES3"
 
 	},
-	"include": ["src/*.ts"]
+	"include": ["src/*.ts", "src/mt.js"]
 }

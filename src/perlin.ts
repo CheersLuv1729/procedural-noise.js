@@ -1,4 +1,5 @@
 import { Noise3d } from "./interface";
+import { MT19937 } from "./mersenne_twister";
 
 const gradients : [number, number, number][] = [
 	[1,1,0], [-1,1,0], [1,-1,0], [-1,-1,0],
@@ -38,14 +39,26 @@ function fade(t: number){
 	return t * t * t * (t * (t*6 - 15) + 10);
 }
 
-function p(i: number): number{
-	return permutations[i & 255];
+function getPermutations(seed: number, length: number = 256){
+	const rand = MT19937(seed);
+	const perms = new Array<number>(length);
+	for(let i = 0; i < 256; i++){
+		perms[i] = i;
+	}
+	for(let i = 0; i < perms.length; i++){
+		const index = Math.floor(rand() % perms.length);
+		[perms[i], perms[index]] = [perms[index], perms[i]];
+	}
+	return perms;
 }
 
-export function Perlin3d() : Noise3d{
+export function Perlin3d(seed?: number) : Noise3d{
 
-	// TODO add seeding in future
-	// posibily randomise permutation/gradient table with prng?
+	const perms = (seed != undefined) ? getPermutations(seed) : permutations;
+
+	function p(i: number): number{
+		return perms[i & 255];
+	}
 
 	return function(x: number, y: number, z: number): number{
 
