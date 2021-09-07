@@ -1,10 +1,10 @@
 {
   "name": "procedural-noise",
   "version": "0.0.1",
-  "description": "",
+  "description": "A collection of procedural noise generators and utilities written in TypeScript.",
   "main": "build/module.js",
-  "types": "build.module.d.ts",
-  "author": "",
+  "types": "build/module.d.ts",
+  "author": "CheersLuv1729",
   "license": "MIT",
   "homepage": "https://github.com/CheersLuv1729/procedural-noise.js#readme",
   "scripts": {
