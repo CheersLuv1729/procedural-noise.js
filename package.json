@@ -1,6 +1,6 @@
 {
   "name": "procedural-noise",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of procedural noise generators and utilities written in TypeScript.",
   "main": "build/module.js",
   "types": "build/module.d.ts",
